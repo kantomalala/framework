@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <description>Mini framework FrontController</description>
+    <display-name>MonFramework</display-name>
+
+    <!-- Définir l'encodage des requêtes -->
+    <request-character-encoding>UTF-8</request-character-encoding>
+
+    <!-- Déclaration du servlet FrontController -->
+    <servlet>
+        <servlet-name>FrontController</servlet-name>
+        <servlet-class>com.myframework.FrontController</servlet-class>
+    </servlet>
+
+    <!-- Mapping du servlet sur toutes les URLs -->
+    <servlet-mapping>
+        <servlet-name>FrontController</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Page d'accueil par défaut -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
